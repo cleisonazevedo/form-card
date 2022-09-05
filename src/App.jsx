@@ -4,7 +4,7 @@ import CredCard from "./templates/CredCard";
 function App() {
   return (
     <Routes>
-      <Route path="/sample1" element={<CredCard />} />
+      <Route path="/" element={<CredCard />} />
     </Routes>
   );
 };
