@@ -29,15 +29,15 @@ const FrontCard = (props) => {
             <img src="./images/card-logo.svg" alt="cartao logo" />
             <h1>{dataCard.number.length < 1 ? defaultData.number : formatNumber(dataCard.number)}</h1>
             <div>
-                <h2>{dataCard.name.length < 1 ? defaultData.name : dataCard.name}</h2>
+                <h2>{dataCard.name.length < 1 ? defaultData.name : dataCard.name.toUpperCase()}</h2>
                 <p>
                     {dataCard.dataM.length < 1 
                     ? defaultData.dataM: 
-                    defaultData.dataM}
+                    dataCard.dataM}
                     /
                     {dataCard.dataY.length < 1 
                     ? defaultData.dataY: 
-                    defaultData.dataY}
+                    dataCard.dataY}
                 </p>
             </div>
         </Container>

@@ -15,6 +15,7 @@ const FormCard = (props) => {
         validationSchema: validation,
         onSubmit: values => {
             console.log('valores', values)
+            props.setIsSubmited(true);
         }
     })
     
@@ -34,7 +35,7 @@ const FormCard = (props) => {
                     // required
                     value={formik.values.name}
                     onChange={formik.handleChange}
-                    maxLength={22}
+                    maxLength={20}
                 />
                 {formik.touched.name && formik.errors.name ? (
                     <InfoError>{formik.errors.name}</InfoError>
